@@ -2,7 +2,8 @@
 # Comision: 50215
 # Estudiante: Marrero Alejo
 
-# Nombre del Proyecto: Panel de Administración (PRODUCTOS, VENTAS Y PROVEEDORES)
+# Nombre del Proyecto: Panel de Administración 
+(PRODUCTOS, VENTAS Y PROVEEDORES)
 
 #Descripción del Proyecto:
 La aplicación web se realizó con la intención de poder administrar de forma concreta y funcional, los elementos que intervienen en la misma.
