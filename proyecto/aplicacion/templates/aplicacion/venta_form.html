@@ -1,0 +1,18 @@
+{% extends "aplicacion/index.html" %}<!-- le indicamos que herede todo el diseño que tiene en aplicacion/index.html-->
+
+{% block  titulo %}<!-- solamente del html index cambiamos los bloques "titulo" y "contenido"-->
+<h1 class="mb-5">Ventas (formulario)</h1>
+{% endblock titulo %}
+
+{% block  contenido %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <table> 
+        {{ form.as_table }}<!--Aqui le estamos indicando que renderice al formulario-->
+    </table>
+    <input type="submit" value="Guardar">
+
+</form>
+
+{% endblock contenido %}

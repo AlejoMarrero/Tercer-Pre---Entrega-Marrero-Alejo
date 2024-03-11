@@ -1,0 +1,30 @@
+{% extends "aplicacion/index.html" %}
+
+{% block contenido %}
+    <center>
+    {% if buscando %}
+        <h1 class="mb-5">Estás buscando "{{ buscando }}"</h1>
+        <br/>
+        <h2>Productos:</h2>
+        {% for p in productos %}
+            {{ p.modelo }} - {{ p.descripcion }} - {{ p.stock }} - {{ p.precio }}<br/>
+        {% empty %}
+            <p>No se encontraron productos.</p>
+        {% endfor %}
+        <h2>Proveedores:</h2>
+        {% for p in proveedores %}
+            {{ p.razon_social }} - {{ p.cuit }} - {{ p.monto_total }}<br/>
+        {% empty %}
+            <p>No se encontraron clientes.</p>
+        {% endfor %}
+        <h2>Ventas:</h2>
+        {% for v in ventas %}
+            {{ v.id }} - {{ v.cliente }} - {{v.documento }} - {{ v.modelo }} - {{ v.precio_venta }} - {{ v.fecha_registro }}<br/>
+        {% empty %}
+            <p>No se encontraron ventas.</p>
+        {% endfor %}
+    {% else %}
+        <h1 class="mb-5">No has ingresado nada para buscar.</h1>
+    {% endif %}
+    </center>
+{% endblock contenido %}

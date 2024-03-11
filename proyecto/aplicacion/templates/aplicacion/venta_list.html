@@ -1,0 +1,63 @@
+{% extends "aplicacion/index.html" %}<!-- le indicamos que herede todo el diseño que tiene en aplicacion/index.html-->
+
+{% block  titulo %}<!-- solamente del html index cambiamos los bloques "titulo" y "contenido"-->
+<h1 class="mb-5">LENTES</h1>
+{% endblock titulo %}
+
+{% block  contenido %}
+
+<table>
+    <tr>
+        <td width = "200" h2>VENTAS</h2></td>
+        <td>
+            <a
+            href="{% url 'ventas_create' %}"
+            class= "btn btn-primary btn-sm"
+            ><i class= "fa fa-plus fa-lg" title="Crear"> </i>
+            </a>
+        </td>
+
+    </tr>
+  
+</table>
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>CLIENTE</th>
+            <th>DOCUMENTO</th>
+            <th>PRECIO VENTA</th>
+            <th>FECHA REGISTRO</th>
+        </tr>
+    </thead>
+    <tbody>       
+    {% for v in venta_list %}
+        <tr>
+
+            <td>{{v.id}}</td>
+            <td>{{v.cliente}}</td>
+            <td>{{v.documento}}</td>
+            <td>{{v.precio_venta}}</td>
+            <td>{{v.fecha_registro}}</td>
+            <td>
+                <a
+                  href="{% url 'ventas_update' v.id %}"
+                  class="btn btn-primary"
+                  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                  ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
+                </a>
+                <a
+                  href="{% url 'ventas_delete' v.id %}"
+                  class="btn btn-danger"
+                  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                  ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
+                </a>                
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>   
+</table>
+{% endblock contenido %}
+{% block imagenes %}
+{% endblock imagenes %}

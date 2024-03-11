@@ -1,0 +1,21 @@
+{% extends "aplicacion/index.html" %}
+
+{% block  titulo %}
+<center>
+    <h1 class="mb-5">Eliminar Producto</h1>
+</center>
+{% endblock titulo %}
+
+{% block contenido %}
+    <h2>PRODUCTO</h2>
+    <form action="" method="POST">
+        {% csrf_token %}   
+        <div class="text-center">     
+            <h3>¿Está seguro de eliminar el producto "{{ object.modelo}}"?</h3>
+            <p>{{ object.descripcion }}</p>
+        </div>
+        <div class="text-center">
+            <input type="submit" class="btn btn-primary btn-block" value="Confirmar">
+        </div>
+    </form>
+{% endblock contenido %}
