@@ -15,9 +15,9 @@ El usuario podrá en esta versión de la aplicación realizar las siguientes acc
 - Eliminar un registro del panel de administración.
 - Realizar una búsqueda de registro en el panel de administración.
   Filtros: 1) Producto, mediante el modelo.
-           2) Proveedor, mediante el razón social.
+           2) Proveedor, mediante la razón social.
            3) Venta, mediante el identificador.
-- Visualizar algunas imagenes de productos a modo de presentarlos.
+- Visualizar algunas imágenes de productos a modo de presentación.
 
 
 La búsqueda principal de este proyecto es entregar un modelo funcional acorde a las necesidades que se solicitaron.
